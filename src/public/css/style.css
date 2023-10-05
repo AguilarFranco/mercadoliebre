@@ -49,7 +49,7 @@ header .form {
     align-items: center;
     padding: 2px;
     font-size: 11px;
-  }
+}
 
 header nav {
     font-size: 12px;
@@ -214,7 +214,7 @@ input[type="date"],
 input[type="file"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
@@ -241,7 +241,8 @@ input[type="reset"]:hover {
 }
 
 br {
-    margin-bottom: 15px; /* Aumentamos el margen inferior de las etiquetas <br> */
+    margin-bottom: 15px;
+    /* Aumentamos el margen inferior de las etiquetas <br> */
 }
 
 /* Login */
@@ -276,6 +277,11 @@ input[type="password"] {
 
 .login input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.offers,
+footer {
+    margin-top: 50px;
 }
 
 @media (max-width: 360px) {
@@ -337,5 +343,93 @@ input[type="password"] {
 
     header li {
         margin: 0 5px;
+    }
+
+    /* Clase 22, animaciones y transiciones */
+
+    .product {
+        width: 250px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        position: relative;
+        margin-bottom: 20px;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .product .main-article {
+        padding: 10px;
+    }
+
+    .product .price {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product .description {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .product:hover .description {
+        opacity: 1;
+    }
+
+    .product .main-article i.fas.fa-truck {
+        transition: transform 0.3s ease;
+    }
+
+    .product:hover .main-article i.fas.fa-truck {
+        transform: rotate(-90deg);
+    }
+
+    .login input[type="submit"]:hover {
+        background-color: #0022AA;
+    }
+
+    footer {
+        padding: 20px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+    }
+
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .section-footer {
+        flex: 1;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .copyright {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: left;
+        margin: 20px;
+    }
+
+    .section-footer i {
+        transition: color 0.3s ease;
+        margin-bottom: 10px;
+    }
+
+    .section-footer i:hover {
+        color: #800080;
     }
 }
